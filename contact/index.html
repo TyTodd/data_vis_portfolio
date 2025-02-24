@@ -11,19 +11,33 @@
     <link rel="stylesheet" href="../styles.css" />
   </head>
   <body>
-    <nav>
-      <a href="../">Home</a>
-      <a href="../projects">Projects</a>
-      <a href="../resume">Resume</a>
-      <a href="../assignments/">Assignments</a>
-      <a href="https://github.com/TyTodd" target="_blank">Github</a>
+    <nav class="navbar">
+      <a class="nav-link" href="../">Home</a>
+      <a class="nav-link" href="../assignments/">Assignments</a>
+      <a class="nav-link" href="../resume">Resume</a>
+      <a class="nav-link" href="../projects">Projects</a>
+      <a class="nav-link current" href="../contact">Contact</a>
+      <a class="nav-link" href="https://github.com/TyTodd" target="_blank"
+        >Github</a
+      >
     </nav>
     <h1>Contact</h1>
-    <form action="mailto:tytodd@mit.edu" method="POST" enctype="text/plain">
-      <label>Email<input name="email" type="email" /></label>
-      <label>Subject<input name="subject" /></label>
-      <label>Body<textarea name="body"> </textarea></label>
-      <button>Submit</button>
+    <form
+      class="contact-form"
+      action="mailto:tytodd@mit.edu"
+      method="POST"
+      enctype="text/plain"
+    >
+      <label class="contact-label"
+        >Email<input class="contact-input" name="email" type="email"
+      /></label>
+      <label class="contact-label"
+        >Subject<input class="contact-input" name="subject"
+      /></label>
+      <label class="contact-label"
+        >Body<textarea class="contact-textarea" name="body"> </textarea>
+      </label>
+      <button class="contact-button">Submit</button>
     </form>
   </body>
 </html>
