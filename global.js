@@ -65,6 +65,7 @@ for (let p of pages) {
   }
 }
 
+console.log(document);
 document.body.insertAdjacentHTML(
   "afterbegin",
   `
@@ -79,6 +80,7 @@ document.body.insertAdjacentHTML(
 );
 
 let select = document.querySelector("select");
+console.log("select", select);
 select.addEventListener("input", function (event) {
   console.log("color scheme changed to", event.target.value);
   document.documentElement.style.setProperty(
