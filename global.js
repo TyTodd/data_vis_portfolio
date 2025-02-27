@@ -81,6 +81,14 @@ document.body.insertAdjacentHTML(
 
 let select = document.querySelector("select");
 console.log("select", select);
+if (localStorage.colorScheme) {
+  document.documentElement.style.setProperty(
+    "color-scheme",
+    localStorage.colorScheme
+  );
+  select.value = localStorage.colorScheme;
+}
+
 select.addEventListener("input", function (event) {
   console.log("color scheme changed to", event.target.value);
   document.documentElement.style.setProperty(
@@ -89,14 +97,6 @@ select.addEventListener("input", function (event) {
   );
   localStorage.colorScheme = event.target.value;
 });
-
-if (localStorage.colorScheme) {
-  document.documentElement.style.setProperty(
-    "color-scheme",
-    localStorage.colorScheme
-  );
-  select.value = localStorage.colorScheme;
-}
 
 let form = document.querySelector("form");
 
