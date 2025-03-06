@@ -1,0 +1,198 @@
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+    <link rel="stylesheet" href="../../styles.css" />
+    <script type="module" src="../../global.js"></script>
+  </head>
+  <body class="c9 doc-content">
+    <h2 class="c2" id="h.96jnx8whyc3f"><span class="c0">Proposition</span></h2>
+    <p class="c4">
+      <span class="c1"
+        >African-Americans are more likely to complain of being physically
+        assaulted by NYPD than white americans</span
+      >
+    </p>
+    <h2 class="c2" id="h.s0isuinqbxjq">
+      <span>Visualization 1: (Proposition True)</span
+      ><span
+        style="
+          overflow: hidden;
+          display: inline-block;
+          margin: 0px 0px;
+          border: 0px solid #000000;
+          transform: rotate(0rad) translateZ(0px);
+          -webkit-transform: rotate(0rad) translateZ(0px);
+          width: 624px;
+          height: 200px; /* Increased height to maintain aspect ratio and make taller */
+        "
+        ><img
+          alt=""
+          src="images/image1.png"
+          style="
+            width: 624px;
+            height: auto; /* Removed fixed height to maintain aspect ratio */
+            margin-left: 0px;
+            margin-top: 0px;
+            transform: rotate(0rad) translateZ(0px);
+            -webkit-transform: rotate(0rad) translateZ(0px);
+          "
+          title=""
+      /></span>
+    </h2>
+    <p class="c3"><span class="c1"></span></p>
+    <ul class="c6 lst-kix_55t6nkqg6yv8-0 start">
+      <li class="c4 c5 li-bullet-0">
+        <span class="c1"
+          >I chose to use a stacked horizontal bar chart to compare
+          distributions because I figured the total count of allegations for a
+          complainant race was the best normalizer. (Earnisty score: 2)</span
+        >
+      </li>
+      <li class="c4 c5 li-bullet-0">
+        <span class="c1"
+          >The stacked bar chart goes left to right to align with the audiences
+          expected orientation of bar charts (Earnisty score: 2)</span
+        >
+      </li>
+      <li class="c4 c5 li-bullet-0">
+        <span class="c1"
+          >I created a calculated field to show the allegation counts as a
+          percentage total allegations for each complainant ethnicity group
+          (Earnisty score: 2)</span
+        >
+      </li>
+    </ul>
+    <ul class="c6 lst-kix_55t6nkqg6yv8-1 start">
+      <li class="c4 c7 li-bullet-0">
+        <span class="c1"
+          >COUNT([Allegation]) / SUM({FIXED [Complainant Ethnicity] :
+          COUNT([Allegation])})
+        </span>
+      </li>
+    </ul>
+    <ul class="c6 lst-kix_55t6nkqg6yv8-0">
+      <li class="c4 c5 li-bullet-0">
+        <span class="c1"
+          >There was over 100 different allegation types so I grouped them up
+          into 17 groups (Earnisty score: 2)</span
+        >
+      </li>
+      <li class="c4 c5 li-bullet-0">
+        <span class="c1"
+          >I removed a the Null, Unknown, and Refused Ethnic groups from the
+          chart because they are irrelevant (Earnisty score: 1.5)</span
+        >
+      </li>
+      <li class="c4 c5 li-bullet-0">
+        <span class="c1"
+          >I also removed a few allegation groups which didn&rsquo;t account for
+          a large part of the distribution such as sexual misconduct, Gun fired,
+          and profinity. Additionally, I removed allegation types that were
+          unclear such as Black, Oriental, Null, and animal. (Earnisty score:
+          .5)</span
+        >
+      </li>
+      <li class="c4 c5 li-bullet-0">
+        <span class="c1"
+          >I added the percentages as labels on the chart so the viewer
+          doesn&rsquo;t have to just rely on the size of each section (Ernesty
+          score: 2)</span
+        >
+      </li>
+      <li class="c4 c5 li-bullet-0">
+        <span class="c1"
+          >Lastly I filtered out allegations that were unsubstantiated since it
+          is unconfirmed whether they happened or not. However the same trends
+          carry over whether using the filter out not (Ernisty score: .5)</span
+        >
+      </li>
+    </ul>
+    <h2 class="c2" id="h.iojau2e1ho4u">
+      <span>Visualization 2: (Proposition Not True) </span
+      ><span
+        style="
+          overflow: hidden;
+          display: inline-block;
+          margin: 0px 0px;
+          border: 0px solid #000000;
+          transform: rotate(0rad) translateZ(0px);
+          -webkit-transform: rotate(0rad) translateZ(0px);
+          width: 624px;
+          height: 132px;
+        "
+        ><img
+          alt=""
+          src="images/image2.png"
+          style="
+            width: 624px;
+            height: 132px;
+            margin-left: 0px;
+            margin-top: 0px;
+            transform: rotate(0rad) translateZ(0px);
+            -webkit-transform: rotate(0rad) translateZ(0px);
+          "
+          title=""
+      /></span>
+    </h2>
+    <p class="c4">
+      <span class="c8">Counter-Proposition: </span
+      ><span class="c1"
+        >White Americans are more likely to complain of being physically
+        assaulted by NYPD than african-americans</span
+      >
+    </p>
+    <ul class="c6 lst-kix_4qalaxkp1b30-0 start">
+      <li class="c4 c5 li-bullet-0">
+        <span
+          >In this graph I did all the same things as in the graph before but I
+          also filtered out allegations that were exonerated, meaning that the
+          board confirmed they happened but they were not ruled misconduct.
+          (Ernisty Score: -2)</span
+        >
+      </li>
+    </ul>
+    <h2 class="c2" id="h.oezkcjep0fmp"><span class="c0">Reflection</span></h2>
+    <p class="c4">
+      <span class="c1"
+        >When creating these visualizations, I realized how much design choices
+        can influence perception, even when working with the same dataset. When
+        exploring the data I found it was very hard to make comparisons across
+        ethnicities because the majority of complainants were black and the
+        majority of officers were white. I had trouble figuring out what a good
+        normalization factor would be. Then, in the first visualization, I found
+        a way to ensure fairness by normalizing allegation counts within each
+        complainant ethnicity group, ensuring a proportionate comparison. I also
+        found that grouping allegations and dispositions into broader categories
+        helped simplify the data. There were over 100 allegation types, some
+        were the exact same thing just with capital letters in different places.
+        The dispositions had 9 different substantiated types for the different
+        outcomes of the substantiated allegation. Adding percentage labels
+        further enhanced readability, making it easier for viewers to interpret
+        differences across groups. However, the choice to exclude
+        unsubstantiated allegations was more complex&mdash;it removed
+        potentially unreliable data but also risked omitting real incidents that
+        lacked confirmation.</span
+      >
+    </p>
+    <p class="c3"><span class="c1"></span></p>
+    <p class="c4">
+      <span class="c1"
+        >In the second visualization, filtering out exonerated allegations
+        significantly altered the narrative, shifting the perception of who was
+        more likely to be physically assaulted by police. While this choice
+        technically adhered to the counter-proposition, it also demonstrated
+        another systemic issue, that when cops physically assault
+        african-americans they are more likely to be exonerated than when they
+        assault white people. The negative earnesty score reflects the ethical
+        implications of omitting confirmed incidents simply because they were
+        not classified as misconduct. This exercise underscored the power of
+        data visualization in shaping narratives and the responsibility that
+        comes with it. Every design choice&mdash;whether in filtering,
+        categorization, or labeling&mdash;carries an implicit bias, making
+        transparency and intent critical for ethical data storytelling.</span
+      >
+    </p>
+    <p class="c3"><span class="c1"></span></p>
+    <p class="c3"><span class="c1"></span></p>
+  </body>
+</html>
